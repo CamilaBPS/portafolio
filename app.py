@@ -4,7 +4,7 @@ import time
 # --- CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(page_title="CP | Cloud Security Specialist", page_icon="⚡", layout="wide")
 
-# --- CSS AVANZADO: DISEÑO TECH/JUVENIL/PREMIUM ---
+# --- CSS ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
@@ -102,7 +102,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("🤖 `Status: Online`")
 
-# --- SECCIÓN 1: INICIO (HERO) ---
+# --- SECCIÓN 1: INICIO ---
 if section == "CORE":
     st.markdown('<p class="hero-text">Camila Paredes Suárez</p>', unsafe_allow_html=True)
     st.markdown("<h3 style='margin-top:-10px; color: #818cf8;'>Cloud Security Engineer</h3>", unsafe_allow_html=True)
@@ -170,7 +170,7 @@ elif section == "TECH_STACK":
         </div>
         """, unsafe_allow_html=True)
 
-# --- SECCIÓN 3: PROYECTOS (MÓDULO DE SEGURIDAD AUDIT) ---
+# --- SECCIÓN 3: PROYECTOS ---
 elif section == "DEPLOYMENTS":
     st.markdown("<h2 style='color: #f8fafc;'>Active Deployments</h2>", unsafe_allow_html=True)
     
@@ -202,7 +202,7 @@ elif section == "DEPLOYMENTS":
                 st.write("Checking IAM policy compliance and open endpoints...")
                 status.update(label="Scan Complete", state="complete", expanded=False)
             
-            # Lógica de decisión adaptada a ciberseguridad
+            # Lógica de decisión
             if puertos_abiertos == 0 and usuarios_sin_mfa == 0:
                 st.balloons()
                 st.markdown(f"""
